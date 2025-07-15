@@ -147,6 +147,7 @@ class ForegroundService : Service() {
                     createForegroundTask()
                 }
                 ForegroundServiceAction.API_UPDATE -> {
+                    startForegroundService()
                     updateNotification()
                     val prevCallbackHandle = prevForegroundTaskData?.callbackHandle
                     val currCallbackHandle = foregroundTaskData.callbackHandle
